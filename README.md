@@ -27,27 +27,6 @@ Notes: numeric ratings are normalized; categorical attributes are encoded; unstr
 
 Ethics: uses public data; remove PHI; follow dataset license and responsible AI guidelines.
 
-#Project Structure
-
-text
-notebooks/
-  01_data_preprocessing.ipynb        # cleaning, encoding, normalization, splits
-  02_model_training.ipynb            # RF, LR, SVM, KNN, NB with CV + tuning
-  03_evaluation_reporting.ipynb      # confusion matrices, ROC curves, heatmaps
-src/
-  data_pipeline.py                    # sklearn Pipeline for preprocessing + feature selection
-  models.py                           # constructors for RF/LR/SVM/KNN/NB
-  train.py                            # training, CV, hyperparameter search, artifact saving
-  evaluate.py                         # metrics computation and plots
-  api.py                              # Flask app loading persisted pipeline + model
-artifacts/
-  models/                             # joblib models and preprocessing objects
-  metrics/                            # CSV/JSON reports and CV logs
-  plots/                              # confusion matrices, ROC, heatmaps
-configs/
-  experiment.yaml                     # seeds, CV folds, scoring, model hyperparameters
-#Setup
-
 Colab
 
 Open notebooks in Google Colab, mount Drive, set DATA_PATH and OUTPUT_DIR.
